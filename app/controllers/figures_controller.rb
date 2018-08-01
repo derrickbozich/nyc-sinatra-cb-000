@@ -38,6 +38,7 @@ class FiguresController < ApplicationController
 
   post '/figures/:id' do
     binding.pry
+    @figure = Figure.find_by_id(params['id'])
     @figure.name = params['figure']['name']
 
     @figure.save
