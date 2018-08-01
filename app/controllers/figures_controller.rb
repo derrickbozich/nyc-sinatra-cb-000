@@ -37,6 +37,7 @@ class FiguresController < ApplicationController
   end
 
   post '/figures/:id' do
+    binding.pry
     @figure.name = params['figure']['name']
     redirect "/figures/#{@figure.id}"
 
